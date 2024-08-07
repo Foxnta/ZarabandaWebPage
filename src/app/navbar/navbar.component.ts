@@ -21,6 +21,16 @@ export class NavbarComponent implements OnInit {
       } else {
         this.renderer.addClass(navbarLinks, 'active');
       }
+
+      if (toggleIcon.classList.contains('fa-bars')) {
+        this.renderer.removeClass(toggleIcon, 'fa-bars');
+        this.renderer.addClass(toggleIcon, 'fa-x');
+        this.renderer.addClass(toggleIcon, 'rotate');
+      } else {
+        this.renderer.removeClass(toggleIcon, 'fa-x');
+        this.renderer.addClass(toggleIcon, 'fa-bars');
+        this.renderer.removeClass(toggleIcon, 'rotate');
+      }
     });
   }
 }
