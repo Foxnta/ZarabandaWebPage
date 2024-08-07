@@ -18,14 +18,16 @@ body {
     background-color: var(--background-color);
 }
 
-
-
 .whatsapp-icon {
+    background-color: #25d366; 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    color: #25D366; /* Color verde de WhatsApp */
-    font-size: 3.5rem; /* Ajusta el tamaño del icono */
+    bottom: 12px;
+    right: 12px;
+    color: #ffffff; 
+    font-size: 2rem; 
     display: flex;
     align-items: center;
     justify-content: center;
