@@ -14,12 +14,15 @@ export class NavbarComponent implements OnInit {
     const toggleButton = this.renderer.selectRootElement('#navbar-toggle', true);
     const navbarLinks = this.renderer.selectRootElement('#navbar-links', true);
     const toggleIcon = this.renderer.selectRootElement('#toggle-icon', true);
+    const body = this.renderer.selectRootElement('body', true);
 
     this.renderer.listen(toggleButton, 'click', () => {
       if (navbarLinks.classList.contains('active')) {
         this.renderer.removeClass(navbarLinks, 'active');
+        this.renderer.removeClass(body, 'no-scroll');
       } else {
         this.renderer.addClass(navbarLinks, 'active');
+        this.renderer.addClass(body, 'no-scroll');
       }
 
       if (toggleIcon.classList.contains('fa-bars')) {

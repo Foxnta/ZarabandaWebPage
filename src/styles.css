@@ -19,6 +19,11 @@ body {
     background-color: var(--background-color);
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
+
 .whatsapp-icon {
     background-color: #25d366; 
     width: 60px; 
