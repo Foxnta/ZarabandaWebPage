@@ -1,0 +1,65 @@
+.pie-pagina {
+    background-color: var(--color2);
+    background: var(--background-color-dark);
+    font-family: var(--fuentePrincipal);
+    padding: 3rem;
+}
+
+.containerFooter{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 10%;
+}
+
+
+.containerFootera p {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+.containerFooter .red-social {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.containerFooter .red-social a {
+    color: var(--color1);
+    transition: color 0.3s;
+}
+
+.containerFooter .red-social a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.containerFooter .box.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto; 
+}
+
+.containerFooter .box.image img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+@media screen and (max-width: 950px) {
+    .containerFooter  {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 90%;
+        gap: 2rem;
+
+    }
+    .pie-pagina{
+        padding: 2rem 0 ;
+    }
+
+}
+
