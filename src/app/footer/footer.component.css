@@ -45,10 +45,9 @@
 }
 
 .containerFooter .box.image img {
-    max-width: 100%; 
+    max-width: 80%; 
     height: auto; 
 }
-
 
 @media screen and (max-width: 950px) {
     .containerFooter  {
@@ -57,8 +56,11 @@
         gap: 2rem;
 
     }
-    .pie-pagina{
-        padding: 2rem 0 ;
+
+    .containerFooter .box.image img {
+        max-width: 50%; 
+        height: auto; 
+        
     }
 
 }

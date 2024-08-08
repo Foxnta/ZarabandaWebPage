@@ -1,7 +1,8 @@
 
+
 .hero {
-    position: relative;
-    top: 80px;
+
+    margin-top: 80px;
     width: 100%;
     height: 75vh; 
     background-image: url('/assets/proyectos/proyecto1.jpeg'); 
@@ -16,11 +17,38 @@
     overflow: hidden;
 }
 
+.hero::before {
+    margin-top: 80px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75vh; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+}
+
+.hero-content h1 {
+    font-weight: 50;
+    letter-spacing: 3px;
+}
+
 
 @media (max-width: 768px) {
     .hero {
         height: 50vh; 
     }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
 
 }
 
@@ -29,16 +57,19 @@
         height: 40vh; 
     }
 
+    .hero-content h1 {
+        font-size: 1.5rem; 
+    }
+
 }
 
 .hero-image {
-    width: 35%;
+    width: 25%;
     height: auto;
   }
   
-  /* Media query para pantallas pequeñas */
-  @media (max-width: 600px) {
-    .hero-image {
-      width: 60%; 
-    }
-  }
+@media (max-width: 600px) {
+.hero-image {
+    width: 30%; 
+}
+}
