@@ -1,4 +1,65 @@
-.banner{
+.mision {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1200px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.hola {
+
+    margin-top: 80px;
+    width: 100%;
+    height: 75vh;
+    background-image: url('/assets/proyectos/proyecto3.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.nosotros {
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    gap: 10%;
+}
+
+.nosotros img {
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+    .mision .content {
+        max-width: 90%;
+    }
+
+    .nosotros {
+        flex-direction: column-reverse;
+
+    }
+}
+
+
+.banner {
     width: 100%;
     height: 450px;
     text-align: center;
@@ -6,7 +67,8 @@
     position: relative;
     background-color: var(--background-color-dark);
 }
-.banner .slider{
+
+.banner .slider {
     position: absolute;
     width: 300px;
     height: 160px;
@@ -18,22 +80,24 @@
     z-index: 2;
 }
 
-@keyframes autoRun{
-    from{
+@keyframes autoRun {
+    from {
         transform: perspective(1000px) rotateX(-5deg) rotateY(0deg);
-    }to{
+    }
+
+    to {
         transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
     }
 }
 
-.banner .slider .item{
+.banner .slider .item {
     position: absolute;
     inset: 0 0 0 0;
-    transform: 
-        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-        translateZ(300px);
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
 }
-.banner .slider .item img{
+
+.banner .slider .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -41,131 +105,132 @@
 
 
 .center {
-  position: absolute;
-  top: 70%;
-  left: calc(50% - 100px);
-  display: flex;
-  justify-content: center;
-  height: 35px;
-  align-items: center;
-  background-color: var(--background-color-dark);
+    position: absolute;
+    top: 70%;
+    left: calc(50% - 100px);
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    align-items: center;
+    background-color: var(--background-color-dark);
 }
 
-.btn-1{
-  width: 200px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.btn-1 {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.btn-1 a
- {
-  text-decoration: none;
-  border: 2px solid #ffffff;
-  padding: 7px;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  display: inline-block;
+.btn-1 a {
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    padding: 7px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
 }
 
 span {
-  position: relative;
-  z-index: 3;
+    position: relative;
+    z-index: 3;
 }
 
 .btn-1 a::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -2px;
-  width: calc(100% + 6px);
-  /*100% plus double the times left values*/
-  height: calc(100% - 10px);
-  background-color: var(--background-color-dark);
-  transition: all 0.5s ease-in-out;
-  transform: scaleY(1);
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -2px;
+    width: calc(100% + 6px);
+    /*100% plus double the times left values*/
+    height: calc(100% - 10px);
+    background-color: var(--background-color-dark);
+    transition: all 0.5s ease-in-out;
+    transform: scaleY(1);
 }
 
 .btn-1 a:hover::before,
- a:hover::before {
-  transform: scaleY(0);
+a:hover::before {
+    transform: scaleY(0);
 }
 
 .btn-1 a::after {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: -5px;
-  width: calc(100% - 10px);
-  height: calc(100% + 10px);
-  background-color: var(--background-color-dark);
-  transition: all 0.5s ease-in-out;
-  transform: scaleX(1);
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: -5px;
+    width: calc(100% - 10px);
+    height: calc(100% + 10px);
+    background-color: var(--background-color-dark);
+    transition: all 0.5s ease-in-out;
+    transform: scaleX(1);
 }
 
 
 .btn-1 a:hover::after,
- a:hover::after {
-  transform: scaleX(0);
+a:hover::after {
+    transform: scaleX(0);
 }
 
 
 
 @media screen and (max-width: 1023px) {
-    .banner .slider{
+    .banner .slider {
         width: 200px;
         height: 150px;
         left: calc(50% - 100px);
     }
-    .banner .slider .item{
-        transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(300px);
+
+    .banner .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
     }
 }
 
 @media screen and (max-width: 700px) {
-    .banner{
+    .banner {
         height: 280px;
     }
-    .banner .slider{
+
+    .banner .slider {
         width: 220px;
         height: 110px;
         left: calc(50% - 110px);
     }
-    .banner .slider .item{
-        transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(170px);
+
+    .banner .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(170px);
     }
-    .btn-1 a
-    {
+
+    .btn-1 a {
         font-size: 16px;
     }
-    
+
 }
 
 @media screen and (max-width: 500px) {
-    .banner{
+    .banner {
         height: 250px;
     }
-    .banner .slider{
+
+    .banner .slider {
         width: 180px;
         height: 100px;
         left: calc(50% - 90px);
     }
-    .banner .slider .item{
-        transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(150px);
+
+    .banner .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(150px);
     }
-    .btn-1 a
-    {
+
+    .btn-1 a {
         font-size: 16px;
     }
-    
+
 }

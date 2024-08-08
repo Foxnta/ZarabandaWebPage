@@ -15,10 +15,9 @@
 }
 
 :root {
-    --primary-color: #ff0000;
-    --secondary-color: #00ff00;
-    --accent-color: #0000ff;
-    --fotn-text: 'Bahnschrift', Arial, sans-serif;
+    --primary-color: rgb(60, 60, 60);
+    --secondary-color: rgb(255, 255, 255);
+    --font-text: 'Bahnschrift', Arial, sans-serif;
     --font-title: 'GeorgiaRef', Arial, sans-serif;
     --background-color: #fcf9f9;
     --background-color-dark: #222222;
@@ -34,17 +33,25 @@
 
 body {
     font-size: 1.6rem;
-    font-family: var(--fotn-text);
+    font-family: var(--font-text);
     background-color: var(--background-color);
 }
 
 h1 {
     font-family: var(--font-title);
     word-spacing: 0.3rem;
+    color: var(--primary-color);
 }
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6{
     font-family: var(--font-title);
+    color: var(--primary-color);
+
+}
+p {
+    color: var(--primary-color);
+    font-family: var(--font-text);
+    margin-bottom: 1rem;
 }
 
 body.no-scroll {
