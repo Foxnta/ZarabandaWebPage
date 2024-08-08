@@ -44,16 +44,20 @@
     .hero {
         height: 50vh; 
     }
+    .hero::before {
+        height: 50vh; 
+    }
 
     .hero-content h1 {
         font-size: 2rem;
     }
-
-
 }
 
 @media (max-width: 480px) {
     .hero {
+        height: 40vh; 
+    }
+    .hero::before {
         height: 40vh; 
     }
 
