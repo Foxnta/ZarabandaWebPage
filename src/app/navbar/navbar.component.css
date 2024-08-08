@@ -17,17 +17,19 @@
     z-index: 1;
     width: 100%;
     max-width: 1500px;
-    padding: 0 50px;
+    padding: 0 25px;
 }
 
-.navbar-logo {
-    color: #fff;
-    justify-self: start;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
+.navbar-logo{
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo img{
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
 }
 
 .nav-menu {

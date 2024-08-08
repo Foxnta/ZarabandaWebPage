@@ -3,16 +3,16 @@
     position: relative;
     top: 80px;
     width: 100%;
-    height: 75vh; /* Reduce la altura del hero en pantallas grandes */
-    background-image: url('/assets/proyectos/proyecto1.jpeg'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* La imagen cubrirá todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* No repite la imagen */
+    height: 75vh; 
+    background-image: url('/assets/proyectos/proyecto1.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     display: flex;
-    align-items: center; /* Centra el contenido verticalmente */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    color: #fff; /* Color del texto */
-    text-align: center; /* Centra el texto */
+    align-items: center; 
+    justify-content: center; 
+    color: #fff; 
+    text-align: center; 
     overflow: hidden;
 }
 
@@ -22,14 +22,6 @@
         height: 50vh; 
     }
 
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero .btn {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -37,12 +29,16 @@
         height: 40vh; 
     }
 
-    .hero h1 {
-        font-size: 1.5rem; 
-    }
-
-    .hero .btn {
-        font-size: 0.8rem;
-        padding: 6px 12px;
-    }
 }
+
+.hero-image {
+    width: 35%;
+    height: auto;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .hero-image {
+      width: 60%; 
+    }
+  }
