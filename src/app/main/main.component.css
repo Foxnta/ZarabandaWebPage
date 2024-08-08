@@ -1,0 +1,69 @@
+.banner{
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--background-color-dark);
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 45s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-5deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(300px);
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1023px) {
+    .banner .slider{
+        width: 200px;
+        height: 150px;
+        left: calc(50% - 100px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner{
+        height: 160px;
+    }
+    .banner .slider{
+        width: 150px;
+        height: 100px;
+        left: calc(50% - 75px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(150px);
+    }
+}
