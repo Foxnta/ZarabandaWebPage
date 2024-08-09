@@ -8,8 +8,9 @@
     margin-bottom: 10px;
 }
 
-
 .valores ul {
+    margin: 0 auto;
+    max-width: 90%;
     margin-top: 20px;
     list-style: none;
     display: flex;
@@ -43,7 +44,7 @@
     font-size: 1.2rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1350px) {
     .valores ul {
         flex-direction: column;
         align-items: center;
@@ -56,7 +57,7 @@
         margin-right: 0px;
         height: 160px;
         width: 90%;
-        max-width: 600px;
+        max-width: 500px;
     }
     
 }
