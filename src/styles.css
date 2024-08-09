@@ -29,8 +29,6 @@
     padding: 0;
 }
 
-
-
 body {
     font-size: 1.6rem;
     font-family: var(--font-text);
@@ -71,4 +69,5 @@ body.no-scroll {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1001;
 }

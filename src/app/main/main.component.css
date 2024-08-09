@@ -8,15 +8,14 @@ h1 {
     font-size: 2.5rem;
     margin: 0 auto;
     text-align: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 15px;
 }
 
-.coverimg {
 
+.coverimg {
     width: 100%;
-    height: 75vh;
-    background-image: url('/assets/proyectos/proyecto3.jpeg');
+    height: 70vh;
+    background-image: url('/assets/proyectos/proyecto3p.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,7 +27,14 @@ h1 {
     overflow: hidden;
 }
 
-.nosotros {
+@media screen and (max-width: 1200px) {
+    .coverimg {
+        height: 30vh;
+    }
+    
+}
+
+.nosotros{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -39,7 +45,33 @@ h1 {
     gap: 10%;
 }   
 
-.nosotros p {
+.servicios{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    gap: 10%;
+}
+
+.frase{
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px;
+    background-color: var(--background-color-dark);
+}
+
+.frase span{
+    color: var(--secondary-color);
+}
+
+
+.nosotros h2, .servicios h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.nosotros p, .servicios p {
     text-align: left;
     margin-left: 20px;
 }
@@ -57,18 +89,20 @@ h1 {
 
     .nosotros {
         flex-direction: column;
-
     }
 
-    .nosotros img {
-        width: 100%;
+    .nosotros .imagen img {
+        width: 40vh;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
     }
 }
 
 
 .banner {
     width: 100%;
-    height: 450px;
+    height: 400px;
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -79,7 +113,7 @@ h1 {
     position: absolute;
     width: 300px;
     height: 160px;
-    top: 10%;
+    top: 20%;
     left: calc(50% - 150px);
     transform-style: preserve-3d;
     transform: perspective(1000px);
@@ -110,10 +144,31 @@ h1 {
     object-fit: cover;
 }
 
+.proyectos {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    gap: 10%;
+    background-color: var(--background-color-dark);
+}
+
+.proyectos.content {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1200px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: var(--background-color-dark);
+}
+
+.proyectos .content h2 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
 
 .center {
     position: absolute;
-    top: 70%;
+    top: 85%;
     left: calc(50% - 100px);
     display: flex;
     justify-content: center;

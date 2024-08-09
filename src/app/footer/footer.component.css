@@ -16,9 +16,18 @@
 }
 
 
-.containerFootera p {
-    font-size: 1.8rem;
-    line-height: 2.5rem;
+.containerFooter p {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.containerFooter h2 {
+    font-weight: 100;
+    color: var(--secondary-color);
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+
 }
 
 .containerFooter .red-social {
@@ -28,13 +37,13 @@
 }
 
 .containerFooter .red-social a {
-    color: var(--color1);
+
+    color: var(--secondary-color);
     transition: color 0.3s;
+    text-decoration: none;
+
 }
 
-.containerFooter .red-social a:hover {
-    color: rgb(255, 255, 255);
-}
 
 .containerFooter .box.image {
     display: flex;
@@ -45,6 +54,7 @@
 }
 
 .containerFooter .box.image img {
+    margin-bottom: 20px;
     max-width: 80%; 
     height: auto; 
 }
@@ -56,7 +66,6 @@
         gap: 2rem;
 
     }
-
     .containerFooter .box.image img {
         max-width: 50%; 
         height: auto; 
