@@ -59,6 +59,10 @@ h1 {
         flex-direction: column;
 
     }
+
+    .nosotros img {
+        width: 100%;
+    }
 }
 
 
