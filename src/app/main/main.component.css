@@ -3,15 +3,6 @@
     text-align: center;
     max-width: 1200px;
 }
-
-h1 {
-    font-size: 2.5rem;
-    margin: 0 auto;
-    text-align: center;
-    padding: 15px;
-}
-
-
 .coverimg {
     width: 100%;
     height: 70vh;
@@ -26,14 +17,11 @@ h1 {
     text-align: center;
     overflow: hidden;
 }
-
 @media screen and (max-width: 1200px) {
     .coverimg {
         height: 30vh;
-    }
-    
+    }   
 }
-
 .nosotros{
     margin: 0 auto;
     display: flex;
@@ -44,7 +32,6 @@ h1 {
     padding-bottom: 25px;
     gap: 10%;
 }   
-
 .nosotros .content {
     display: flex;
     flex-direction: column;
@@ -52,17 +39,12 @@ h1 {
     align-items: center;
     gap: 20px;
 }
-
-.servicios, .valores{
+.servicios{
     margin: 0 auto;
     max-width: 1400px;
     padding-top: 25px;
     padding-bottom: 25px;
 }
-.valores{
-    padding-top: 0;
-}
-
 .frase{
     font-size: 1.5rem;
     margin: 0 auto;
@@ -70,90 +52,29 @@ h1 {
     padding: 50px;
     background-color: var(--background-color-dark);
 }
-
 .frase span{
     color: var(--secondary-color);
 }
-
-
-.nosotros h2, .servicios h2, .valores h2, .equipo h2 {
+.nosotros h2, .servicios h2, .equipo h2 {
     text-align: center;
     margin-bottom: 10px;
 }
-
-.valores ul {
-    margin-top: 20px;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-}
-
-.valores ul li {
-    width: 250px;
-    height: 220px;
-    display: flex;
-    flex-direction: column;
-    margin-right: 8px;
-    padding: 15px;
-    background-color: var(--background-color-dark);
-    color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.valores ul li h3 {
-    color: var(--secondary-color);
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 1.4rem;
-}
-
-.valores ul li p {
-    color: var(--secondary-color);
-    margin: 0;
-    font-size: 1.2rem;
-}
-
-@media screen and (max-width: 1200px) {
-    .valores ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .valores ul li {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 10px;
-        margin-right: 0px;
-        height: 160px;
-        width: 90%;
-        max-width: 600px;
-    }
-    
-}
-
-
 .nosotros p, .servicios p {
     text-align: left;
     margin-left: 20px;
 }
-
 .nosotros img {
     width: 400px;
     height: 100%;
     object-fit: cover;
 }
-
 @media screen and (max-width: 1200px) {
     .mision .content {
         max-width: 90%;
     }
-
     .nosotros {
         flex-direction: column;
     }
-
     .nosotros img {
         width: 100%;
         max-height: 450px;
@@ -161,202 +82,4 @@ h1 {
     .frase{
         padding: 20px;
     }
-}
-
-
-.banner {
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    background-color: var(--background-color-dark);
-}
-
-.banner .slider {
-    position: absolute;
-    width: 300px;
-    height: 160px;
-    top: 20%;
-    left: calc(50% - 150px);
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    animation: autoRun 45s linear infinite;
-    z-index: 2;
-}
-
-@keyframes autoRun {
-    from {
-        transform: perspective(1000px) rotateX(-5deg) rotateY(0deg);
-    }
-
-    to {
-        transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
-    }
-}
-
-.banner .slider .item {
-    position: absolute;
-    inset: 0 0 0 0;
-    transform:
-        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
-}
-
-.banner .slider .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.proyectos {
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    gap: 10%;
-    background-color: var(--background-color-dark);
-}
-
-.proyectos.content {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 1200px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    background-color: var(--background-color-dark);
-}
-
-.proyectos .content h2 {
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-
-.center {
-    position: absolute;
-    top: 85%;
-    left: calc(50% - 100px);
-    display: flex;
-    justify-content: center;
-    height: 35px;
-    align-items: center;
-    background-color: var(--background-color-dark);
-}
-
-.btn-1 {
-    width: 200px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.btn-1 a {
-    text-decoration: none;
-    border: 2px solid #ffffff;
-    padding: 7px;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    display: inline-block;
-}
-
-span {
-    position: relative;
-    z-index: 3;
-}
-
-.btn-1 a::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: -2px;
-    width: calc(100% + 6px);
-    /*100% plus double the times left values*/
-    height: calc(100% - 10px);
-    background-color: var(--background-color-dark);
-    transition: all 0.5s ease-in-out;
-    transform: scaleY(1);
-}
-
-.btn-1 a:hover::before,
-a:hover::before {
-    transform: scaleY(0);
-}
-
-.btn-1 a::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: -5px;
-    width: calc(100% - 10px);
-    height: calc(100% + 10px);
-    background-color: var(--background-color-dark);
-    transition: all 0.5s ease-in-out;
-    transform: scaleX(1);
-}
-
-
-.btn-1 a:hover::after,
-a:hover::after {
-    transform: scaleX(0);
-}
-
-
-
-@media screen and (max-width: 1023px) {
-    .banner .slider {
-        width: 200px;
-        height: 150px;
-        left: calc(50% - 100px);
-    }
-
-    .banner .slider .item {
-        transform:
-            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .banner {
-        height: 280px;
-    }
-
-    .banner .slider {
-        width: 220px;
-        height: 110px;
-        left: calc(50% - 110px);
-    }
-
-    .banner .slider .item {
-        transform:
-            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(170px);
-    }
-
-    .btn-1 a {
-        font-size: 16px;
-    }
-
-}
-
-@media screen and (max-width: 500px) {
-    .banner {
-        height: 250px;
-    }
-
-    .banner .slider {
-        width: 180px;
-        height: 100px;
-        left: calc(50% - 90px);
-    }
-
-    .banner .slider .item {
-        transform:
-            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(150px);
-    }
-
-    .btn-1 a {
-        font-size: 16px;
-    }
-
 }
