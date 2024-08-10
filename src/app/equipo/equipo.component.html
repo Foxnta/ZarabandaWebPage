@@ -1,0 +1,18 @@
+<div class="equipo">
+    <div class="content">
+      <h2>Nuestro Equipo</h2>
+    </div>
+    <swiper-container
+    [loop]="true"
+    [navigation]="true"
+    [slidesPerView]="slidesPerView">
+      <swiper-slide class="slide" *ngFor="let miembro of equipo.integrantes">
+            <div class="miembro">
+                <img [src]="miembro.url" [alt]="miembro.nombre">
+                <h5>{{ miembro.nombre }}</h5>
+                <p>{{ miembro.especialidad }}</p>
+            </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  
