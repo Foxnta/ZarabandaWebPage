@@ -4,8 +4,10 @@
     padding-bottom: 25px;
 }
 .valores h2{
-    text-align: center;
-    margin-bottom: 10px;
+    width: 400px;
+    position: relative;
+    left: 270px;
+    margin-bottom: 45px;
 }
 
 .valores ul {
@@ -23,12 +25,11 @@
     height: 220px;
     display: flex;
     flex-direction: column;
-    margin-right: 8px;
+    margin-right: 15px;
     padding: 15px;
     background-color: var(--background-color-dark);
-    color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgb(87, 78, 78);
 }
 
 .valores ul li h3 {
@@ -45,6 +46,14 @@
 }
 
 @media screen and (max-width: 1350px) {
+
+    .valores h2{
+        position: static;
+        width: 100%;
+        text-align: center;
+
+    }
+
     .valores ul {
         flex-direction: column;
         align-items: center;
@@ -53,7 +62,7 @@
     .valores ul li {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         margin-right: 0px;
         height: 160px;
         width: 90%;
