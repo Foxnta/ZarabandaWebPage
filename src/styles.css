@@ -14,12 +14,13 @@
     font-style: normal;
 }
 
+
 :root {
     --primary-color: rgb(60, 60, 60);
     --secondary-color: rgb(255, 255, 255);
     --font-text: 'Bahnschrift', Arial, sans-serif;
-    --font-title: 'GeorgiaRef', Arial, sans-serif;
-    --background-color: #fcf9f9;
+    --font-title: 'Roboto', Arial, sans-serif;
+    --background-color: #F8F8F8;
     --background-color-dark: #222222;
 }
 
@@ -39,7 +40,6 @@ h1 {
     font-family: var(--font-title);
     word-spacing: 0.3rem;
     color: var(--primary-color);
-    font-size: 2.5rem;
     margin: 0 auto;
     text-align: center;
     padding: 15px;
@@ -54,7 +54,106 @@ p {
     color: var(--primary-color);
     font-family: var(--font-text);
     margin-bottom: 1rem;
+    letter-spacing: normal;
+    line-height: 1.8;
 }
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    h6 {
+        font-size: 0.9rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    h4 {
+        font-size: 1.4rem;
+    }
+    h5 {
+        font-size: 1.2rem;
+    }
+    h6 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    h1 {
+        font-size: 2.3rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    h4 {
+        font-size: 1.6rem;
+    }
+    h5 {
+        font-size: 1.4rem;
+    }
+    h6 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    h4 {
+        font-size: 1.8rem;
+    }
+    h5 {
+        font-size: 1.6rem;
+    }
+    h6 {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+}
+
 
 body.no-scroll {
     overflow: hidden;

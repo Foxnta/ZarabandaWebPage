@@ -22,27 +22,28 @@
 
 .valores ul li {
     width: 250px;
-    height: 220px;
+    height: auto;
     display: flex;
     flex-direction: column;
     margin-right: 15px;
     padding: 15px;
     background-color: var(--background-color-dark);
     border-radius: 10px;
-    box-shadow: 0 4px 16px rgb(87, 78, 78);
+    box-shadow: 0 4px 12px rgb(87, 78, 78);
 }
 
-.valores ul li h3 {
+.valores ul li h6 {
+    border-bottom: 1px solid var(--secondary-color);
     color: var(--secondary-color);
     text-align: center;
-    margin-bottom: 5px;
-    font-size: 1.4rem;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
 }
 
 .valores ul li p {
+    line-height: normal;
     color: var(--secondary-color);
     margin: 0;
-    font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1350px) {
@@ -63,7 +64,7 @@
         align-items: center;
         margin-bottom: 15px;
         margin-right: 0px;
-        height: 170px;
+        height: auto;
         width: 90%;
         max-width: 500px;
     }
