@@ -5,7 +5,8 @@
     <swiper-container
     [loop]="true"
     [navigation]="true"
-    [slidesPerView]="slidesPerView">
+    [slidesPerView]="slidesPerView"
+    >
       <swiper-slide class="slide" *ngFor="let miembro of equipo.integrantes">
             <div class="miembro">
                 <img [src]="miembro.url" [alt]="miembro.nombre">

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, HostListener, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import { Component, OnInit, HostListener, CUSTOM_ELEMENTS_SCHEMA, ViewEncapsulation } from '@angular/core';
+import { ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-equipo',
@@ -8,7 +8,7 @@ import { Component, OnInit, HostListener, CUSTOM_ELEMENTS_SCHEMA } from '@angula
   imports: [CommonModule],
   templateUrl: './equipo.component.html',
   styleUrls: ['./equipo.component.css'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 
 export class EquipoComponent implements OnInit {
@@ -39,12 +39,13 @@ export class EquipoComponent implements OnInit {
 
   slidesPerView: number = 0;
 
-  constructor() {
+  constructor(private renderer: Renderer2, private el: ElementRef) {
     this.updateSlidesPerView(window.innerWidth);
   }
 
   ngOnInit(): void {
     this.updateSlidesPerView(window.innerWidth);
+    this.modifySwiperButtonStyles();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -61,6 +62,22 @@ export class EquipoComponent implements OnInit {
         this.slidesPerView = 3;
     } else {
       this.slidesPerView = 4;
+    }
+  }
+
+  modifySwiperButtonStyles(): void {
+    const swiperContainer = document.querySelector('swiper-container');
+    if (swiperContainer && swiperContainer.shadowRoot) {
+      const styleElement = document.createElement('style');
+      styleElement.innerText = `
+        .swiper-button-next {
+          color: var(--primary-color) !important;
+        }
+        .swiper-button-prev {
+          color: var(--primary-color) !important;
+        }
+      `;
+      swiperContainer.shadowRoot.appendChild(styleElement);
     }
   }
 

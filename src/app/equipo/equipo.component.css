@@ -41,3 +41,14 @@
 .swiper-pagination {
     margin-top: 1000px !important;
 }
+
+@media screen and (max-width: 1200px) {
+    .miembro {
+        height: 400px;
+    }
+}
+
+::ng-deep .swiper-button-next,
+::ng-deep .swiper-button-prev {
+  color: var(--secondary-color) !important;
+}
