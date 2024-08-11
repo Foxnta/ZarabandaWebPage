@@ -47,8 +47,3 @@
         height: 400px;
     }
 }
-
-::ng-deep .swiper-button-next,
-::ng-deep .swiper-button-prev {
-  color: var(--secondary-color) !important;
-}

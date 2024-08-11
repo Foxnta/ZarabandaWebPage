@@ -71,10 +71,10 @@ export class EquipoComponent implements OnInit {
       const styleElement = document.createElement('style');
       styleElement.innerText = `
         .swiper-button-next {
-          color: var(--primary-color) !important;
+          color: #e07721 !important;
         }
         .swiper-button-prev {
-          color: var(--primary-color) !important;
+          color: #e07721 !important;
         }
       `;
       swiperContainer.shadowRoot.appendChild(styleElement);
