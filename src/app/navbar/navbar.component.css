@@ -53,7 +53,7 @@
 }
 
 .nav-links:hover {
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid #e07721;
 }
 
 .menu-icon {
@@ -62,6 +62,10 @@
 
 .li-contactanos {
     display: none;
+}
+
+.contactanos{
+    width: 200px;
 }
 
 .btn-contactanos {
