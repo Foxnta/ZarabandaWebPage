@@ -25,7 +25,7 @@ export class EquipoComponent implements OnInit {
         url: "/assets/team/Jose.jpg"
       },
       {
-        nombre: 'Betzy Hernandez',
+        nombre: 'Betsy Alexandra Hernández',
         especialidad: 'Directora comercial, financiera y jurídica.',
         url: "/assets/team/Betzy.jpg"
       },
