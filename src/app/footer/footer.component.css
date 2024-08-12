@@ -16,7 +16,7 @@
 }
 
 
-.containerFooter p {
+.containerFooter p, .containerFooter a {
     color: var(--secondary-color);
     font-size: 1.2rem;
 }
