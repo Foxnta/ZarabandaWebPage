@@ -78,8 +78,8 @@
     object-fit: cover;
 }
 @media screen and (max-width: 1200px) {
-    .mision .content {
-        max-width: 90%;
+    .mision  {
+        max-width: 95%;
     }
     .nosotros {
         flex-direction: column;
