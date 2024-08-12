@@ -21,6 +21,10 @@
     font-size: 1.2rem;
 }
 
+.containerFooter p{
+    margin-bottom: 0px;
+}
+
 .containerFooter h2 {
     font-weight: 100;
     color: var(--secondary-color);
