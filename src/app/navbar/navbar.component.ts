@@ -37,5 +37,13 @@ export class NavbarComponent implements OnInit {
         this.renderer.removeClass(toggleIcon, 'rotate');
       }
     });
+    const navLinks = navbarLinks.querySelectorAll('.nav-links');
+    navLinks.forEach((link: HTMLElement) => {
+      this.renderer.listen(link, 'click', () => {
+        if (window.innerWidth < 960) {
+          toggleButton.click();
+        }
+      });
+    });
   }
 }
