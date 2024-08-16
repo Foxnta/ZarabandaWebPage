@@ -2,7 +2,7 @@
     <div>
         <h1>Proyectos</h1>
         <div class="proyectos-container">
-            <div class="proyecto" *ngFor="let proyecto of proyectos">
+            <div class="proyecto" *ngFor="let proyecto of proyectos" (click)="viewProject(proyecto.url_pdf)">
                 <img [src]="proyecto.url_img" [alt]="proyecto.name">
                 <h2>{{ proyecto.name }}</h2>
                 <p>{{ proyecto.description }}</p>
