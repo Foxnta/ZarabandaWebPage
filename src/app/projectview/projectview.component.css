@@ -1,9 +1,10 @@
 
 
 pdf-viewer {
-  display: block;
-  height: 842px;
-  overflow: auto;
+  height: calc(100vh - 80px);
+  /* display: block; */
+  /* height: 842px; */
+  /* overflow: auto; */
 }
 
 /*pdf page border bottom only - using custom css as in this version we don't have attribute support*/
