@@ -66,7 +66,6 @@
 @media screen and (max-width: 950px) {
     .containerFooter  {
         grid-template-columns: repeat(1, 1fr);
-        max-width: 90%;
         gap: 2rem;
 
     }

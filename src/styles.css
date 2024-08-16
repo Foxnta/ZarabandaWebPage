@@ -165,7 +165,7 @@ body.no-scroll {
     height: 60px; 
     border-radius: 50%; 
     position: fixed;
-    bottom: 12px;
+    bottom: 12px; 
     right: 12px;
     color: #ffffff; 
     font-size: 2rem; 

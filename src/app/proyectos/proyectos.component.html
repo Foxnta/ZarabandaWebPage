@@ -2,30 +2,10 @@
     <div>
         <h1>Proyectos</h1>
         <div class="proyectos-container">
-            <div class="proyecto">
-                <img src="/assets/proyectos/proyecto1.jpeg" alt="">
-                <h2>Proyecto 1</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-            </div>
-            <div class="proyecto">
-                <img src="/assets/proyectos/proyecto2.jpeg" alt="">
-                <h2>Proyecto 2</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-            </div>
-            <div class="proyecto">
-                <img src="/assets/proyectos/proyecto3.jpeg" alt="">
-                <h2>Proyecto 3</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-            </div>
-            <div class="proyecto">
-                <img src="/assets/proyectos/proyecto4.jpeg" alt="">
-                <h2>Proyecto 4</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-            </div>
-            <div class="proyecto">
-                <img src="/assets/proyectos/proyecto5.jpeg" alt="">
-                <h2>Proyecto 5</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <div class="proyecto" *ngFor="let proyecto of proyectos">
+                <img [src]="proyecto.url_img" [alt]="proyecto.name">
+                <h2>{{ proyecto.name }}</h2>
+                <p>{{ proyecto.description }}</p>
             </div>
         </div>
     </div>

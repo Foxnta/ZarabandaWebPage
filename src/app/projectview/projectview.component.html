@@ -1,0 +1,14 @@
+
+
+
+<div class="page-container">
+  <div class="row">
+    <div class="right-wrapper">
+      <div class="pdf-container" *ngIf="reRender">
+        <pdf-viewer [src]="pdfSrc" [original-size]="false">
+        </pdf-viewer>
+      </div>
+    </div>
+  </div>
+</div>
+
