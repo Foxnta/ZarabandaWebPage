@@ -16,7 +16,7 @@ export class ProyectosComponent implements OnInit{
       {
         name: 'Proyecto 1',
         description: 'Descripción del proyecto 1',
-        url_img: '/assets/proyectos/proyecto1.jpeg',
+        url_img: '/assets/proyectos/proyecto1.jpg',
         url_pdf: '/assets/proyectos_pdf/proyecto1.pdf',
       },
       {

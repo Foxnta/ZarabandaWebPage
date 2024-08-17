@@ -4,6 +4,7 @@ import { ValoresComponent } from '../valores/valores.component';
 import { BannerproyectosComponent } from '../bannerproyectos/bannerproyectos.component';
 import { EquipoComponent } from "../equipo/equipo.component";
 import { Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -14,7 +15,7 @@ import { Renderer2 } from '@angular/core';
 })
 export class MainComponent {
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private router: Router) {}
 
   ngOnInit(): void {
     this.addSmoothScroll();
@@ -23,6 +24,7 @@ export class MainComponent {
   addSmoothScroll(): void {
     const navbarLinks = this.renderer.selectRootElement('#navbar-links', true); 
     const navLinks = navbarLinks.querySelectorAll('.nav-links');
+
     const scrollToSection = (sectionId: string) => {
       const checkExist = setInterval(() => {
         const section = document.querySelector(sectionId);
@@ -43,12 +45,32 @@ export class MainComponent {
     navLinks.forEach((link: HTMLElement) => {
       const linkText = link.textContent?.trim();
       if (linkText && ['Servicios', 'Nosotros', 'Contactanos'].includes(linkText)) {
-        this.renderer.listen(link, 'click', () => scrollToSection(`#${linkText.toLowerCase()}`));
+        if (linkText === 'Contactanos') {
+          this.renderer.listen(link, 'click', () => {
+            if (this.router.url.includes('projectview')) {
+              this.router.navigate(['/']).then(() => {
+                scrollToSection('#contactanos');
+              });
+            } else {
+              scrollToSection('#contactanos');
+            }
+          });
+        } else {
+          this.renderer.listen(link, 'click', () => scrollToSection(`#${linkText.toLowerCase()}`));
+        }
       }
     });
   
-    const buttonContactanos = this.renderer.selectRootElement('#button-contactanos', true);
-    this.renderer.listen(buttonContactanos, 'click', () => scrollToSection('#contactanos'));
+
+      const buttonContactanos = this.renderer.selectRootElement('#button-contactanos', true);
+      this.renderer.listen(buttonContactanos, 'click', () => {
+        if (this.router.url.includes('projectview')) {
+          this.router.navigate(['/']);
+        } else {
+          scrollToSection('#contactanos');
+        }
+      });
+
   }
   
 }
