@@ -44,7 +44,7 @@ export class MainComponent {
   
     navLinks.forEach((link: HTMLElement) => {
       const linkText = link.textContent?.trim();
-      if (linkText && ['Servicios', 'Nosotros', 'Contactanos'].includes(linkText)) {
+      if (linkText && ['Servicios', 'Nosotros', 'Contactanos', 'Inicio'].includes(linkText)) {
         if (linkText === 'Contactanos') {
           this.renderer.listen(link, 'click', () => {
             if (this.router.url.includes('projectview')) {
@@ -55,6 +55,9 @@ export class MainComponent {
               scrollToSection('#contactanos');
             }
           });
+        }
+        else if (linkText === 'Inicio') {
+          this.renderer.listen(link, 'click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
         } else {
           this.renderer.listen(link, 'click', () => scrollToSection(`#${linkText.toLowerCase()}`));
         }
