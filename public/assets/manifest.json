@@ -7,9 +7,9 @@
     "theme_color": "#ffffff",
     "icons": [
       {
-        "src": "/assets/144.png",
-        "sizes": "144x144",
-        "type": "image/png"
+        "src": "/assets/favicon.ico",
+        "sizes": "96x96",
+        "type": "image/x-icon"
       },
       {
         "src": "/assets/48.png",
@@ -17,8 +17,8 @@
         "type": "image/png"
       },
       {
-        "src": "/assets/48.png",
-        "sizes": "96x96",
+        "src": "/assets/144.png",
+        "sizes": "144x144",
         "type": "image/png"
       }
     ]
