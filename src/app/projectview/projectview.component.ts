@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { PdfViewerModule, PDFDocumentProxy } from 'ng2-pdf-viewer'; // Importa PDFDocumentProxy para tener acceso a la información del PDF
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-
 
 @Component({
   selector: 'app-projectview',
@@ -13,12 +12,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProjectviewComponent implements OnInit {
   pdfSrc: string = '';
+  isLoading: boolean = true; // Controla el estado de carga
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.pdfSrc = params['pdfUrl'] || '/';
+      this.isLoading = true;  // Reinicia el estado de carga al cambiar el PDF
     });
   }
 
@@ -32,5 +33,9 @@ export class ProjectviewComponent implements OnInit {
     }, 5);
   }
 
-
+  // Función callback para cuando el PDF se haya cargado completamente
+  callBackFn(pdf: PDFDocumentProxy) {
+    console.log('PDF cargado:', pdf);
+    this.isLoading = false; // Oculta el spinner cuando el PDF ha sido cargado
+  }
 }

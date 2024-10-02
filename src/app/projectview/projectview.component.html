@@ -1,11 +1,19 @@
 <div class="page-container">
   <div class="row">
     <div class="right-wrapper">
-      <div class="pdf-container" *ngIf="reRender">
-        <pdf-viewer [src]="pdfSrc" [original-size]="false">
+      <!-- Mostrar el spinner mientras se carga el PDF -->
+      <div *ngIf="isLoading" class="spinner">
+        <img src="assets/load.gif" alt="Cargando..." />
+      </div>
+
+      <!-- Mostrar el PDF cuando se haya cargado -->
+      <div class="pdf-container">
+        <pdf-viewer 
+          [src]="pdfSrc" 
+          [original-size]="false"
+          (after-load-complete)="callBackFn($event)">
         </pdf-viewer>
       </div>
     </div>
   </div>
 </div>
-
