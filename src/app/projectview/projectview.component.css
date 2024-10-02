@@ -28,3 +28,16 @@ pdf-viewer {
   transform: translate(-50%, -50%);
   z-index: 9999;
 }
+
+.spinner img {
+  width: 350px;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .spinner img {
+    width: 250px;
+    height: auto;
+  }
+  
+}
