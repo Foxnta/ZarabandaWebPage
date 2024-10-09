@@ -1,5 +1,0 @@
-[[redirects]]
-    from = "/*"
-    to = "https://constructorazarabanda.com"
-    status = 301
-    force = true
