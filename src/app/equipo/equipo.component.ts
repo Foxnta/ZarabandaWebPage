@@ -28,12 +28,12 @@ export class EquipoComponent implements OnInit {
         nombre: 'Betsy Alexandra Hernández',
         especialidad: 'Directora comercial, financiera y jurídica.',
         url: "/assets/team/Betzy.jpg"
-      },
-      {
-        nombre: 'Juanita Arango',
-        especialidad: 'Directora de proyectos y mercadeo.',
-        url: "/assets/team/Juanita.jpg"
       }
+      // {
+      //   nombre: 'Juanita Arango',
+      //   especialidad: 'Directora de proyectos y mercadeo.',
+      //   url: "/assets/team/Juanita.jpg"
+      // }
     ]
   };
 
