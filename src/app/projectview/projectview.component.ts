@@ -35,7 +35,7 @@ export class ProjectviewComponent implements OnInit {
 
   // Función callback para cuando el PDF se haya cargado completamente
   callBackFn(pdf: PDFDocumentProxy) {
-    console.log('PDF cargado:', pdf);
+    // console.log('PDF cargado:', pdf);
     this.isLoading = false; // Oculta el spinner cuando el PDF ha sido cargado
   }
 }
