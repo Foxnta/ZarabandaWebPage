@@ -37,6 +37,26 @@ export class ProyectosComponent implements OnInit{
         name: 'Proyecto 5',
         url_img: '/assets/proyectos/proyecto5.png',
         url_pdf: '/assets/proyectos_pdf/proyecto5.pdf',
+      },
+      {
+        name: 'Proyecto 7',
+        url_img: '/assets/proyectos/proyecto7.png',
+        url_pdf: '/assets/proyectos_pdf/proyecto7.pdf',
+      },
+      {
+        name: 'Proyecto 8',
+        url_img: '/assets/proyectos/proyecto8.png',
+        url_pdf: '/assets/proyectos_pdf/proyecto8.pdf',
+      }      ,
+      {
+        name: 'Proyecto 9',
+        url_img: '/assets/proyectos/proyecto9.png',
+        url_pdf: '/assets/proyectos_pdf/proyecto9.pdf',
+      },
+      {
+        name: 'Proyecto 10',
+        url_img: '/assets/proyectos/proyecto10.png',
+        url_pdf: '/assets/proyectos_pdf/proyecto10.pdf',
       }
   ]
 
