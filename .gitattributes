@@ -1,1 +1,4 @@
 *.pdf filter=lfs diff=lfs merge=lfs -text
+public/assets/proyectos_pdf/proyecto8.pdf filter=lfs diff=lfs merge=lfs -text
+public/assets/proyectos_pdf/proyecto9.pdf filter=lfs diff=lfs merge=lfs -text
+public/assets/proyectos_pdf/proyecto10.pdf filter=lfs diff=lfs merge=lfs -text
