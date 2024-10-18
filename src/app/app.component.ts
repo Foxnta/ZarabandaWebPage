@@ -7,11 +7,12 @@ import { HeroComponent } from './hero/hero.component';
 import { MainComponent } from './main/main.component';
 import { CommonModule } from '@angular/common';
 import { FormComponent } from './form/form.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HeroComponent, MainComponent, FooterComponent, CommonModule, FormComponent],
+  imports: [RouterOutlet, NavbarComponent, HeroComponent, MainComponent, FooterComponent, CommonModule, FormComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -20,7 +21,6 @@ export class AppComponent {
   constructor(private router: Router) { }
 
   showFooter: boolean = true;
-  showForm: boolean = true;
 
   ngOnInit() {
     this.router.events.subscribe(event => {
@@ -34,11 +34,5 @@ export class AppComponent {
         this.showFooter = true;
       }
     });
-
-    // // Configurar el temporizador para mostrar el formulario después de un minuto
-    // setTimeout(() => {
-    //   this.showForm = true;
-    // }, 6000); // 60000 milisegundos = 1 minuto
-
   };
 }

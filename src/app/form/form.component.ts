@@ -15,7 +15,7 @@ export class FormComponent {
   ngOnInit(): void {
     // Mostrar el overlay después de 3 segundos
     setTimeout(() => {
-      this.showOverlay = true;
+      this.showOverlay = false;
     }, 9000);
   }
 
