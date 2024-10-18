@@ -1,27 +1,42 @@
-<div *ngIf="isContactFormSubmitted">
-    Thank you for reaching out! Your message has been successfully sent. I'll get back to you as soon as I can.
+
+<div class="overlay" id="formOverlay" *ngIf="showOverlay">
+    <div class="form-container" >
+        <span class="close-btn" (click)="closeForm()">&times;</span>
+        <form *ngIf="!isContactFormSubmitted" name="contact" [formGroup]="contactForm" method="POST"
+        (ngSubmit)="onSubmit($event)" netlify>
+            <h2>Gánate un descuento en tu próximo diseño</h2>
+            <!-- This input field is very important to add, at least when we submit the form, making sure Netlify can receive the submission  -->
+            <input type="hidden" name="form-name" value="contact" />
+            <label for="name">Nombre</label>
+            <div *ngIf="name && name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                <small *ngIf="name.errors?.['required']">El nombre es requerido</small>
+            </div>
+            <input id="name" type="text" formControlName="name" required />
+
+            <label for="email">Correo electrónico</label>
+            <div *ngIf="email && email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                <small *ngIf="email.errors?.['required']">El correo es requerido</small>
+                <small *ngIf="email.errors?.['email']">Ingresa un correo válido</small>
+            </div>
+            <input id="email" type="email" formControlName="email" required />
+
+            <label for="phone">Teléfono</label>
+            <div *ngIf="phone && phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
+                <small *ngIf="phone.errors?.['required']">El teléfono es requerido</small>
+                <small *ngIf="phone.errors?.['pattern']">Ingresa un teléfono válido</small>
+            </div>
+            <input id="phone" type="tel" formControlName="phone" required pattern="[0-9]{10}" />
+
+            <label for="body">Mensaje</label>
+            <div *ngIf="body && body.invalid && (body.dirty || body.touched)" class="alert alert-danger">
+                <small *ngIf="body.errors?.['required']">El mensaje es requerido</small>
+            </div>
+            <textarea id="body" type="text" rows="4" cols="50" formControlName="body" placeholder="Describe tu proyecto o consulta en detalle..." required></textarea>
+            <button type="submit" [disabled]="!contactForm.valid">Enviar</button>
+        </form>
+        <div class="agradecimiento" *ngIf="isContactFormSubmitted">
+            <h2>¡Gracias por contactarnos!</h2>
+            <p> Tu mensaje ha sido enviado exitosamente. Te responderemos lo antes posible.</p>
+        </div>
+    </div>
 </div>
-<form *ngIf="!isContactFormSubmitted" name="contact" [formGroup]="contactForm" method="POST"
-    (ngSubmit)="onSubmit($event)" netlify>
-    <!-- This input field is very important to add, at least when we submit the form, making sure Netlify can receive the submission  -->
-    <input type="hidden" name="form-name" value="contact" />
-    <label for="name">Name</label>
-    <div *ngIf="name && name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-        <small *ngIf="name.errors?.['required']">Name is required</small>
-    </div>
-    <input id="name" type="text" formControlName="name" required />
-
-    <label for="email">Email</label>
-    <div *ngIf="email && email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
-        <small *ngIf="email.errors?.['required']">Email is required</small>
-        <small *ngIf="email.errors?.['email']">Enter a valid email address</small>
-    </div>
-    <input id="email" type="email" formControlName="email" required />
-
-    <label for="body">Message</label>
-    <div *ngIf="body && body.invalid && (body.dirty || body.touched)" class="alert alert-danger">
-        <small *ngIf="body.errors?.['required']">Message is required</small>
-    </div>
-    <textarea id="body" type="text" rows="4" cols="50" formControlName="body" required></textarea>
-    <button type="submit" [disabled]="!contactForm.valid">Send message</button>
-</form>

@@ -1,0 +1,103 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+
+
+.form-container {
+    background-color: #f0f0f0;
+    /* Fondo gris */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* Cambiado a la derecha */
+    cursor: pointer;
+    font-size: 30px;
+    /* Aumentado tamaño de la 'X' */
+    color: #ff0000;
+    /* Color rojo */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e07721;
+    /* Color naranja */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f37d1d;
+    /* Sombra más oscura al pasar el cursor */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .form-container {
+        width: 80%;
+        /* Formulario ocupa el 90% de la pantalla pequeña */
+    }
+
+    input,
+    textarea {
+        padding: 6px;
+        /* Inputs más pequeños en pantallas pequeñas */
+        font-size: 12px;
+        /* Tamaño de letra reducido */
+    }
+
+    button {
+        padding: 8px;
+        /* Botón más pequeño */
+    }
+}
+
+
+.alert-danger {
+    font-size: 1rem;
+    color: #a94442;
+}
