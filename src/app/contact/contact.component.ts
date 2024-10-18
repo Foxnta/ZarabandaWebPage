@@ -48,8 +48,10 @@ export class ContactComponent implements OnInit {
     this.http
       .post('/', new URLSearchParams(formData).toString(), { headers, responseType: 'text' })
       .subscribe(() => {
-        this.closeForm();
         this.isContactFormSubmitted = true;
+        setTimeout(() => {
+          this.closeForm();
+        }, 5000);
       });
   }
 
