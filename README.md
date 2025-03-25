@@ -1,27 +1,38 @@
-# Zarabanda
+Constructora Zarabanda Web Page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+📌 About the Project
+This is the official website for Constructora Zarabanda, a construction company specializing in real estate projects. The website provides information about the company's services, projects, and contact details while ensuring an intuitive and responsive user experience.
 
-## Development server
+🛠️ Technologies Used
+Frontend: Angular 18, TypeScript, HTML, SCSS
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Styling: Bootstrap, Angular Material
 
-## Code scaffolding
+Deployment: Netlify / Firebase (if applicable)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+🚀 Live Website
+🔗 Visit the Website
 
-## Build
+🔧 Installation & Setup
+To run the project locally, follow these steps:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Clone the repository:
 
-## Running unit tests
+sh
+Copiar
+Editar
+git clone https://github.com/Foxnta/ZarabandaWebPage.git
+cd ZarabandaWebPage
+Install dependencies:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+sh
+Copiar
+Editar
+npm install
+Run the development server:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+sh
+Copiar
+Editar
+ng serve
+The app will be available at http://localhost:4200/.
